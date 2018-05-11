@@ -2,8 +2,8 @@ use "net"
 
 actor Main
   new create(env: Env) =>
-    let host = try env.arg(1)? else "" end
-    let port = try env.art(2)? else "8989" end
+    let host = try env.args(1)? else "" end
+    let port = try env.args(2)? else "8989" end
     try
       TCPListener(env.root as AmbientAuth,
         recover ChatTCPListenNotify end, host, port)
@@ -11,6 +11,9 @@ actor Main
 
 // https://github.com/ponylang/ponyc/blob/0.21.3/packages/net/tcp_listen_notify.pony
 class ChatTCPListenNotify is TCPListenNotify
+  new create() =>
+    None
+
   fun ref connected(listen: TCPListener ref): TCPConnectionNotify iso^ =>
     ChatTCPConnectionNotify
 
