@@ -10,19 +10,6 @@ actor Main
         recover ChatTCPListenNotify(ChatRoom) end, host, port)
     end
 
-actor ChatRoom
-  let conn_to_name: MapIs[TCPConnection, String] = conn_to_name.create()
-
-  be add_connection(conn: TCPConnection, nick: String) =>
-    conn_to_name(conn) = nick
-
-  be send_msg(nick: String, msg: String) =>
-    for (c, n) in conn_to_name.pairs() do
-      if nick != n then
-        c.write(nick + ": " + msg + "\n")
-      end
-    end
-
 class ChatTCPListenNotify is TCPListenNotify
   let _chat_room: ChatRoom
 
@@ -62,3 +49,16 @@ class ChatTCPConnectionNotify is TCPConnectionNotify
 
   fun ref connect_failed(conn: TCPConnection ref) =>
     None
+
+actor ChatRoom
+  let _conn_to_name: MapIs[TCPConnection, String] = _conn_to_name.create()
+
+  be add_connection(conn: TCPConnection, nick: String) =>
+    _conn_to_name(conn) = nick
+
+  be send_msg(nick: String, msg: String) =>
+    for (c, n) in _conn_to_name.pairs() do
+      if nick != n then
+        c.write(nick + ": " + msg + "\n")
+      end
+    end
