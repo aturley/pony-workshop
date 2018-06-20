@@ -10,6 +10,6 @@ This is the repo for the Pony workshop. There are numbered subdirectories under 
 
 As you work through the parts of this workshop it may be useful to refer to the following sources of information:
 
-[Pony cheat sheet](https://www.ponylang.org/media/cheatsheet/pony-cheat-sheet.pdf)
-[Pony standard library documentation](https://stdlib.ponylang.org/)
-[Pony tutorial](https://tutorial.ponylang.org/)
+* [Pony cheat sheet](https://www.ponylang.org/media/cheatsheet/pony-cheat-sheet.pdf)
+* [Pony standard library documentation](https://stdlib.ponylang.org/)
+* [Pony tutorial](https://tutorial.ponylang.org/)
