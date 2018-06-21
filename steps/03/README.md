@@ -1,6 +1,6 @@
 # Step 03
 
-This program listens for connections on a TCP port; when a connection is established it waits to receive some data and then sends out a response that incorporates the data. You can connect to it using a telnet client client. By default it listens on port 8989 of localhost.
+This program listens for connections on a TCP port; when a connection is established it waits to receive some data and then sends out a response that incorporates the data. You can connect to it using a telnet client. By default it listens on port 8989 of localhost.
 
 ## Interfaces
 

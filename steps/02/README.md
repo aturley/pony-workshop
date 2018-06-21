@@ -36,7 +36,8 @@ The Pony compiler knows the type of every object in a program. The type of an ob
 
 In Pony, a full type includes a reference capability. Reference capabilities are used to limit how an object can be accessed using an alias.
 
-|| Reference Capability || Full Name || Meaning ||
+| Reference Capability | Full Name | Meaning |
+| -------------------- | --------- | ------- |
 | iso | isolated | only this alias can be used to read or write to the object |
 | trn | transitional | only this alias can be used to write to the object, other aliases may be used to read from the object |
 | val | value | this alias can be used to read from the object, other aliases may also be able to read from the object, no alias can write to the object |
@@ -52,7 +53,7 @@ In the program in this step we have been explicit about the reference capabiliti
 
 ## Why Does Pony Have Reference Capabilities?
 
-The Pony compiler uses reference capabilities to ensure that data safety is never compromised so that it can guarantee that programs are free of data races.At their heart, reference capabilities ensure that the following two properties are always true:
+The Pony compiler uses reference capabilities to ensure that data safety is never compromised so that it can guarantee that programs are free of data races. At their heart, reference capabilities ensure that the following two properties are always true:
 
 1. Read Rule -- If more than one actor can read from an object then no actor can write to the object.
 2. Write Rule -- If an actor can write to an object then no other actor can read from the object.
