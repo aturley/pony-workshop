@@ -27,15 +27,15 @@ When you run the program you should see `hello world` printed to the screen.
 
 ## Anatomy of a Pony Program
 
-## Actors
+### Actors
 
 Programs in Pony start with actors. In fact, anything that happens in a Pony program happens because of an actor. Actors are the unit of concurrency in Pony. The runtime can run many different actors at the same time, but each actor only processes one message at a time.
 
-### The `Main` Actor
+#### The `Main` Actor
 
 The `Main` actor is the parent of all other actors. When the program starts, the runtime creates an instance of the `Main` actor and sends it a `create` message. Messages can have arguments, and in this case the argument is an object called `env` of type `Env`. The `env` object contains information that comes into the program, such as the environment variables (accessed via the method `env.var()`), the command line arguments (`env.args`), and actors that represent the standard input (`env.input`), standard output (`env.out`), and standard error (`env.err`) streams.
 
-## Messages
+### Messages
 
 Actors do things in response to messages.
 
@@ -43,7 +43,7 @@ When an actor sends a message, the runtime places the message on the recipient's
 
 In this program, the `Main` actor sends a message to the `env.out` actor to print a message. This message takes a string argument and prints it to the standard output. The `.` operator is used to send a message to an actor, as in `env.out.print(msg)`. Messages are handled by methods that are called behaviors. A behavior has the same name as the message that is sent to it.
 
-## Aliases
+### Aliases
 
 The line `let msg = "hello world"` creates a `String` object whose value is `"hello world"` and assigns that object to an alias called `msg`. Aliases are names that are associated with an object. Using `let` means that the alias cannot be reassigned to refer to a new object; `var` can be used if the alias needs to be able to refer to new objects. In this program, the alias `msg` is used to include the `String` object as part of the `print` message that gets sent to the `env.out` actor.
 

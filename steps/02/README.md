@@ -51,7 +51,7 @@ In some places the Pony compiler can infer the type of an alias based on the typ
 
 In the program in this step we have been explicit about the reference capabilities and types of the aliases: `env`'s type is `Env val`, `name`'s type is `String val`, `msg`'s type is `String val` and `m`'s type is `String ref`. This is done in this example to make the type of each alias clear.
 
-## Why Does Pony Have Reference Capabilities?
+### Why Does Pony Have Reference Capabilities?
 
 The Pony compiler uses reference capabilities to ensure that data safety is never compromised so that it can guarantee that programs are free of data races. At their heart, reference capabilities ensure that the following two properties are always true:
 
