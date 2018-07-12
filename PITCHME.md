@@ -2,10 +2,6 @@
 
 ## Learn some Pony!
 
-Andrew Turley (@casio_juarez)
-
-Brian Mitchell (@strmpnk)
-
 ---
 
 ## What is Pony?
