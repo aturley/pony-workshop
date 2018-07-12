@@ -39,7 +39,7 @@ In Pony, a full type includes a reference capability. Reference capabilities are
 | Reference Capability | Full Name | Meaning |
 | -------------------- | --------- | ------- |
 | iso | isolated | only this alias can be used to read or write to the object |
-| trn | transitional | only this alias can be used to write to the object, other aliases may be used to read from the object |
+| trn | transitional | only this alias can be used to read or write to the object, other aliases may be used to read from the object |
 | val | value | this alias can be used to read from the object, other aliases may also be able to read from the object, no alias can write to the object |
 | ref | reference | this alias can be used to read and write to the object, other aliases may be able to read and/or write to the object |
 | box | box | this alias can be used to read from the object, other aliases may be able to read and/or write to the object |
