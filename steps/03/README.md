@@ -37,3 +37,10 @@ The first argument to the `TCPListener`'s constructor is the `AmbientAuth` objec
 If you look at the code for `TCPListener` you'll see that the first parameter is not actually used by the constructor; the only purpose of the `AmbientAuth` argument is to communicate that the piece of the program that is creating the `TCPListener` is authorized to interact with the world outside of the program.
 
 For more information about capabilties and ambient authority please see [the Pony API documentation for `AmbientAuthority`](https://stdlib.ponylang.org/builtin-AmbientAuth/), [the Pony Tutorial](https://tutorial.ponylang.org/capabilities/object-capabilities.html), and ["Capability Myths Demolished"](http://srl.cs.jhu.edu/pubs/SRL2003-02.pdf).
+
+## Things to Try
+
+1. Get rid of the `try ... end` block around the creation of the `TCPListener` object in `Main`?
+2. Remove the `iso` in front of the `create` function in `ChatTCPListenNotify`.
+3. Remove the `not_listening` method in `ChatTCPListenNotify`.
+4. Remove the `consume` keyword on the line `conn.write(consume data)`.

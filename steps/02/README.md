@@ -127,3 +127,11 @@ In the case of our program, we use the `append` method to add `"hello "` and the
 ```
 
 The `msg` alias is `val` so it can be used to send the string to `env.out` using the `print` message.
+
+## Things to Try
+
+1. Leave off the `?` at the end of `env.args.apply(1)?`.
+2. Get rid of the `try ... else ... end` block and simply say `let name: String val = env.args.apply(1)?`.
+3. The `recover` block in the example "lifts" a `String ref` to a `String val`. `val` and `box` aliases are both read-only, so what happens if you change the line `let msg: String val = recover val` to `let msg: String box = recover box`? Why?
+4. What types of aliases will the compiler allow you to create to the object aliased by `msg`? For example, `let msg_box: String box = msg` is allowed. What other reference capablities besides `box` could you use for a new alias? Why?
+5. Call `msg.append(" foo")` right before you print out `msg`.

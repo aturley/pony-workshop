@@ -48,3 +48,9 @@ In this program, the `Main` actor sends a message to the `env.out` actor to prin
 The line `let msg = "hello world"` creates a `String` object whose value is `"hello world"` and assigns that object to an alias called `msg`. Aliases are names that are associated with an object. Using `let` means that the alias cannot be reassigned to refer to a new object; `var` can be used if the alias needs to be able to refer to new objects. In this program, the alias `msg` is used to include the `String` object as part of the `print` message that gets sent to the `env.out` actor.
 
 `env` is also an alias. Any time you have a name that refers to an object you have an alias. Parameters to methods are aliases, so if you call a method then aliases will be created that refer to the objects that you pass as arguments.
+
+## Things to Try
+
+1. The `env` object has other members besides `out`. Look at the documentation for the standard library and try to figure out how to print a message to the standard error stream instead of the standard output stream.
+2. All type names must be capitalized. What kind of error do you get if you change `Main` to `main`?
+3. All alias names must start with an `_` or a lowercase letter. What happens if you change `env` or `msg` to violate this rule?
