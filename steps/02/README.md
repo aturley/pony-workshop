@@ -2,7 +2,7 @@
 
 This program prints out a "hello" message, where "hello" is followed by either the first argument to the program or "[unknown]" if there is no argument given to the program.
 
-```ponyc
+```pony
 actor Main
   new create(env: Env val) =>
     let name: String val = try
