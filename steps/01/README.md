@@ -53,4 +53,4 @@ The line `let msg = "hello world"` creates a `String` object whose value is `"he
 
 1. The `env` object has other members besides `out`. Look at the documentation for the standard library and try to figure out how to print a message to the standard error stream instead of the standard output stream.
 2. All type names must be capitalized. What kind of error do you get if you change `Main` to `main`?
-3. All alias names must start with an `_` or a lowercase letter. What happens if you change `env` or `msg` to violate this rule?
+3. All local alias names must start with a lowercase letter. What happens if you change `env` or `msg` to violate this rule? For more information about variable naming, see the [Variables section](https://tutorial.ponylang.org/expressions/variables.html) of the Pony tutorial.
