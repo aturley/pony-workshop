@@ -71,6 +71,12 @@ A `tag` alias can also be safely passed between actors because `tag` aliases can
 
 It is important to understand that reference capabilities are only concerned with guaranteeing data race freedom. Functional programmers may be used to systems where all values are immutable. Immutability may be useful for reasoning about certain kinds of problems, and `val` will enforce immutability, but the only reason the Pony compiler cares about immutability is because it allows it to enforce the Read Rule and the Write Rule.
 
+## Functions vs Behaviors
+
+This example has calls to functions and behaviors. `m.append("hello ")` calls the function `append`, while `env.out.print(msg)` calls the behavior `print`. Function and behavior calls both use a `.` notation at the call site, so you can't tell by looking at a call whether it is to a function or a behavior, you have to look at the declaration. Behind the scenes they do different things. As mentioned earlier, a behavior call sends a message to an actor, and that message is processed asynchronously by the behavior. When a function is called it is performed synchronously and it returns a value to the caller.
+
+In Pony we collectively refer to functions and behaviors as methods.
+
 ## Partial Functions
 
 Partial functions are functions that return valid results for some of their inputs and raise errors for others. A call to a partial function is denoted with a `?` after the function call. If the function cannot return a valid result for a given input then it raises an error. A function must deal with all of the partial functions that are used inside of it, or it too must be a partial function and the errors generated in it will propogate out of it. The `try` block is used to handle errors and provide an alternative path of execution if an error is raised.
