@@ -87,6 +87,10 @@ In this program we use a `try` block to attempt to get the argument at the index
     end
 ```
 
+### Errors and Behaviors
+
+Functions can be partial, but behaviors must be total; all errors must be caught and handled before leaving a behavior. This means that errors cannot be used to signal to one actor that there was a problem in another actor. In Pony you should use promises or callbacks to communicate this kind of thing. In this example `create` is a behavior, so the potential error around accessing the argument array must be handled.
+
 ## Recovering Reference Capabilities
 
 Sometimes it is useful to create an alias to an object with a flexible set of reference capabilities, manipulate that object in some way, and then get a version of the object that can be assigned to an alias with a more restrictive set of reference capabilities. This often occurs when one wants to create a `ref` alias, manipulate the object, and then turn it into a `val` or an `iso` so that it can be sent to another actor. In a situation like this we can use a `recover` block. Without the recover block we would have no way to convert from a `ref` to a `val`, because "giving up" a `ref` alias would not guarantee that there are no more aliases that can write to the object.
