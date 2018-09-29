@@ -19,6 +19,12 @@
 
 ---
 
+## What Is Pony Good For?
+
+Pony is a good language for writing fast stream-oriented and event-oriented servers.
+
+---
+
 ## Concurrency without data races
 
 All concurrency is handled through *actors*
@@ -30,7 +36,7 @@ The Pony compiler uses *reference capabilities* to guarantee that a program does
 ## Actors
 
 * Messages that are sent to an actor are placed in a queue
-* An actor processes one message at a time
+* An actor processes one messages at a time
 * Actors run concurrently
 * When an actor is finished processing a message, it processes the next message in the queue or waits until a new message is available
 
