@@ -29,7 +29,7 @@ In this case the `_nickname` variable not only stores the nickname, it also acts
 
 ## Actors
 
-There is a single instance of a `ChatRoom` actor that coordinates activity between client connections. When new clients connect to the server and receive a nickname they send an `add_connection` message with the to the `ChatRoom` actor. The `add_connection` behavior handles the message, adding the client's `TCPConnection` and nickname to the `_conn_to_name` map.
+There is a single instance of a `ChatRoom` actor that coordinates activity between client connections. When new clients connect to the server and receive a nickname they send an `add_connection` message with that to the `ChatRoom` actor. The `add_connection` behavior handles the message, adding the client's `TCPConnection` and nickname to the `_conn_to_name` map.
 
 ### The `tag` Reference Capability
 
