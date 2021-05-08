@@ -6,7 +6,7 @@ If you are presenting this workshop, please see the [README for presenters](READ
 
 ## Preparation
 
-[Pony](https://ponylang.org) is a fast actor-based programming language that guarantees that programs will not have data races. This workshop will teach participants about some of Pony's core ideas and patterns by having them write a series of small programs that culminate in a simple chat server. Topics covered will include Pony's actor system, reference capabilities, and working with the compiler. Attendees should bring a laptop with the following software installed: [the Pony compiler](https://github.com/ponylang/ponyc#installation), and a telnet client. They should also clone [the workshop git repository](https://github.com/aturley/pony-workshop).
+[Pony](https://ponylang.org) is a fast actor-based programming language that guarantees that programs will not have data races. This workshop will teach participants about some of Pony's core ideas and patterns by having them write a series of small programs that culminate in a simple chat server. Topics covered will include Pony's actor system, reference capabilities, and working with the compiler. Attendees should bring a laptop with the following software installed: [the Pony compiler](https://github.com/ponylang/ponyc/blob/main/INSTALL.md), and a telnet client. They should also clone [the workshop git repository](https://github.com/aturley/pony-workshop).
 
 ## Useful Materials
 
