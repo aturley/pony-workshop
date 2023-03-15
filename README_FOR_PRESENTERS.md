@@ -13,7 +13,7 @@ The following copy can be used to announce and advertise the workshop:
 > This workshop will teach participants about some of Pony’s core ideas and patterns by having them write a series of small programs that culminate in a simple chat server. Topics covered will include Pony’s actor system, reference capabilities, and working with the compiler.
 > Please Note:
 >
-> Make sure to bring a laptop with the following software installed: the [Pony compiler](https://github.com/ponylang/ponyc#installation), and a telnet client. Also clone the [workshop git repository](https://github.com/aturley/pony-workshop).
+> Make sure to bring a laptop with the following software installed: the [Pony compiler](https://github.com/ponylang/ponyc/blob/main/INSTALL.md), and a telnet client. Also clone the [workshop git repository](https://github.com/aturley/pony-workshop).
 
 You will probably want to limit the number of participants to around 20. Any more than that and things will likely become chaotic.
 
